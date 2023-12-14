@@ -17,20 +17,20 @@
       {
         "pagePath": "pages/home/index",
         "text": "首页",
-        "iconPath": "resource/images/home-hei.png",
-        "selectedIconPath": "resource/images/home-hei-active.png"
+        "iconPath": "resource/images/icon/home-hei.png",
+        "selectedIconPath": "resource/images/icon/home-hei-active.png"
       },
       {
         "pagePath": "pages/review/review",
         "text": "回顾",
-        "iconPath": "resource/images/huigu-hei.png",
-        "selectedIconPath": "resource/images/huigu-hei-active.png"
+        "iconPath": "resource/images/icon/huigu-hei.png",
+        "selectedIconPath": "resource/images/icon/huigu-hei-active.png"
       },
       {
         "pagePath": "pages/user/user",
         "text": "个人中心",
-        "iconPath": "resource/images/user-hei.png",
-        "selectedIconPath": "resource/images/user-hei-active.png"
+        "iconPath": "resource/images/icon/user-hei.png",
+        "selectedIconPath": "resource/images/icon/user-hei-active.png"
       }
     ]
   },
