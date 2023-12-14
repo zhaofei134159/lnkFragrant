@@ -1,0 +1,7 @@
+<!--index.wxml-->
+<navigation-bar title="{{appletName}}" back="{{false}}" color="#3f3d3d" background="#FFF"></navigation-bar>
+<scroll-view class="scrollarea" scroll-y type="list">
+  <view class="container">
+      
+  </view>
+</scroll-view>

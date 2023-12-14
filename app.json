@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/home/index",
+    "pages/review/review",
+    "pages/user/user"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "backgroundColor": "#3f3d3d",
+    "borderStyle": "black",
+    "color": "#aaa",
+    "selectedColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "text": "首页",
+        "iconPath": "resource/images/home-hei.png",
+        "selectedIconPath": "resource/images/home-hei-active.png"
+      },
+      {
+        "pagePath": "pages/review/review",
+        "text": "回顾",
+        "iconPath": "resource/images/huigu-hei.png",
+        "selectedIconPath": "resource/images/huigu-hei-active.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "个人中心",
+        "iconPath": "resource/images/user-hei.png",
+        "selectedIconPath": "resource/images/user-hei-active.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "rendererOptions": {
+    "skyline": {
+      "defaultDisplayBlock": true,
+      "disableABTest": true,
+      "sdkVersionBegin": "3.0.0",
+      "sdkVersionEnd": "15.255.255"
+    }
+  },
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}
