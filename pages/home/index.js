@@ -25,9 +25,10 @@ Component({
             var item = Articles[i];
               item.desc = util.delHtmlTag(item.desc);
           }
-          self.data.lun_ad = callback.data.lun_ad;
-          self.data.works = Articles;
-          console.log(self.data.works)
+          self.setData({
+            lun_ad: callback.data.lun_ad,
+            works: Articles,
+          })        
         }
       })
     },

@@ -9,11 +9,11 @@
   box-sizing: border-box;
 } 
 
-@font-face {
+/*@font-face {
   font-family: 'guoziwen-shufa';
   src: url('resource/font/guoziwen-shufa.ttf') format('truetype');
 }
 
 .guoziwenshufa{
   font-family: 'guoziwen-shufa';
-}
+}*/

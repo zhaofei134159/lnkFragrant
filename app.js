@@ -12,6 +12,12 @@ App({
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
       }
     })
+
+    wx.loadFontFace({
+      family: 'guoziwen-shufa',
+      source: 'url("/resource/font/guoziwen-shufa.ttf")',
+      success: console.log
+    })
   },
   globalData: {
     userInfo: null
