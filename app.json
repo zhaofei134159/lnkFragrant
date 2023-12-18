@@ -9,6 +9,7 @@
     "navigationStyle": "custom"
   },
   "tabBar": {
+    "custom": true,
     "backgroundColor": "#3f3d3d",
     "borderStyle": "black",
     "color": "#aaa",
@@ -16,19 +17,19 @@
     "list": [
       {
         "pagePath": "pages/home/index",
-        "text": "首页",
+        "text": "",
         "iconPath": "resource/images/icon/home-hei.png",
         "selectedIconPath": "resource/images/icon/home-hei-active.png"
       },
       {
         "pagePath": "pages/review/review",
-        "text": "回顾",
+        "text": "",
         "iconPath": "resource/images/icon/huigu-hei.png",
         "selectedIconPath": "resource/images/icon/huigu-hei-active.png"
       },
       {
         "pagePath": "pages/user/user",
-        "text": "个人中心",
+        "text": "",
         "iconPath": "resource/images/icon/user-hei.png",
         "selectedIconPath": "resource/images/icon/user-hei-active.png"
       }

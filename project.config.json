@@ -31,8 +31,14 @@
     },
     "useIsolateContext": true,
     "useCompilerModule": false,
+    "packNpmManually": true,
     "userConfirmedUseCompilerModuleSwitch": false,
-    "packNpmRelationList": []
+    "packNpmRelationList": [
+      {
+        "packageJsonPath": "./package.json",
+        "miniprogramNpmDistDir": "./"
+      }
+    ]
   },
   "editorSetting": {
     "tabIndent": "auto",

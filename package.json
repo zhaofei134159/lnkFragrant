@@ -1,0 +1,22 @@
+{
+  "name": "lnkfragrant",
+  "version": "1.0.0",
+  "description": "lnkFragrant",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhaofei134159/lnkFragrant.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhaofei134159/lnkFragrant/issues"
+  },
+  "homepage": "https://github.com/zhaofei134159/lnkFragrant#readme",
+  "dependencies": {
+    "@vant/weapp": "^1.11.2"
+  }
+}
