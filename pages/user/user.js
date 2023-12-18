@@ -12,6 +12,13 @@ Component({
     canIUseGetUserProfile: wx.canIUse('getUserProfile'),
     canIUseNicknameComp: wx.canIUse('input.type.nickname'),
   },
+  onShow() {
+    if (typeof this.getTabBar === 'function' && this.getTabBar()) {
+      this.getTabBar().setData({
+        selected: 2
+      })
+    }
+  },
   methods: {
     // 事件处理函数
     bindViewTap() {

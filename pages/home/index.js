@@ -10,6 +10,13 @@ Component({
     webUrl: conf.webUrl,
     appletName: "墨香随笔"
   },
+  onShow() {
+    if (typeof this.getTabBar === 'function' && this.getTabBar()) {
+      this.getTabBar().setData({
+        selected: 0
+      })
+    }
+  },
   lifetimes: {
     attached() {
       var self = this;

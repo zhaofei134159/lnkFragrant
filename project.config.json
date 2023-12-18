@@ -31,12 +31,12 @@
     },
     "useIsolateContext": true,
     "useCompilerModule": false,
-    "packNpmManually": true,
     "userConfirmedUseCompilerModuleSwitch": false,
+    "packNpmManually": true,
     "packNpmRelationList": [
       {
         "packageJsonPath": "./package.json",
-        "miniprogramNpmDistDir": "./"
+        "miniprogramNpmDistDir": "./miniprogram_npm/"
       }
     ]
   },
