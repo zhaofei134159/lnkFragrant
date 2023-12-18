@@ -48,17 +48,43 @@
 	                </view>
 	            </navigator>
 			</view> -->
-
+			
             <navigator url='../detail/detail?workId={{item.id}}'>
                 <view class="diary">
-					<view class="diary-left" style="background-image: url('{{blogUrl}}/resource/images/bookmark/3.jpg'); background-repeat: no-repeat; background-size: 100% 100%;">
-						<view class="diary-bookmark" style="color: black;">
-							以梦为马，以汗为泉, 不忘初心，不负韶华
+					<view class="diary-top">
+						<view class="diary-head-top"></view>
+						<view class="diary-main-top">
+							<view class="diary-top-left">
+								<view class="diary-top-head">
+	                        		<image src='{{blogUrl}}/resource/images/head/1.jpg' class='img' mode=""></image>
+								</view>
+								<view class="diary-top-name-date">
+									<view class="diary-top-name">卧室煤油灯</view>
+									<view class="diary-top-date">2023/12/18 09:39:02</view>
+								</view>
+							</view>
+							<view class="diary-top-right">
+								<view class="diary-more">...</view>
+							</view>
 						</view>
 					</view>	
-					<view class="diary-right">
-						
-					</view>	
+					<view class="diary-center">
+						asdasdsadasdadasdasdasdsadasdsadasda
+					</view>
+					<view class="diary-bottom">
+						<view class="diary-bottom-left">
+							<view class='diary-bottom-img'><image src="{{blogUrl}}/resource/images/icon/preview-open.png" class="icon" alt=""></image></view>
+							<view class="diary-bottom-text">99</view>
+						</view>
+						<view class="diary-bottom-center">
+							<image src="{{blogUrl}}/resource/images/icon/comment.png" class='icon-img' alt=""></image>
+							<view class="diary-bottom-text">99+</view>
+						</view>
+						<view class="diary-bottom-right">
+							<image src="{{blogUrl}}/resource/images/icon/like.png" class='icon-img' alt=""></image>
+							<view class="diary-bottom-text">21</view>
+						</view>
+					</view>
                 </view>
             </navigator>
 	    </view>
