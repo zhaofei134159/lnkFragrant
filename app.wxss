@@ -7,7 +7,12 @@
   justify-content: space-between;
   padding: 200rpx 0;
   box-sizing: border-box;
-} 
+  margin-bottom: 40px;
+}
+
+.all{
+  margin-bottom: 40px;
+}
 
 /*@font-face {
   font-family: 'guoziwen-shufa';

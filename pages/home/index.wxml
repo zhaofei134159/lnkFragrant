@@ -1,126 +1,32 @@
 <!--index.wxml-->
-<navigation-bar title="{{appletName}}" back="{{false}}" color="#3f3d3d" background="#FFF"></navigation-bar>
+<navigation-bar title="" back="{{false}}" color="#3f3d3d" background="#FFF"></navigation-bar>
 <scroll-view class="scrollarea" scroll-y type="list">
 	<view class="all">
-	    <!--轮播图  -->
-	    <view class='nav'>
-	        <swiper class="swiper" indicator-dots="true" autoplay="true" current="{{current}}" interval="5000" duration="500"   circular="true">
-	            <!-- <view wx:for="{{lun_ad}}" wx:key="item">
-	                <navigator url='../detail/detail?workId={{item.id}}'>
-	                    <swiper-item>
-	                        <image src='{{blogUrl}}/resource/images/lunbo/1.jpg' class='img' mode=""></image>
-	                    </swiper-item>
-	                </navigator>
-	            </view> -->
-	            <navigator url='../detail/detail?workId={{item.id}}'>
-                    <swiper-item class="lunbo">
-                        <image src='{{blogUrl}}/resource/images/lunbo/1.jpg' class='img' mode=""></image>
-                    </swiper-item>
-                </navigator> 
-	            <navigator url='../detail/detail?workId={{item.id}}'>
-                    <swiper-item class="lunbo">
-                        <image src='{{blogUrl}}/resource/images/lunbo/2.jpg' class='img' mode="" ></image>
-                    </swiper-item>
-                </navigator> 
-	            <navigator url='../detail/detail?workId={{item.id}}'>
-                    <swiper-item class="lunbo">
-                        <image src='{{blogUrl}}/resource/images/lunbo/3.jpg' class='img' mode=""></image>
-                    </swiper-item>
-                </navigator> 
-	            <navigator url='../detail/detail?workId={{item.id}}'>
-                    <swiper-item class="lunbo">
-                        <image src='{{blogUrl}}/resource/images/lunbo/4.jpg' class='img' mode=""></image>
-                    </swiper-item>
-                </navigator>  
-	        </swiper>
-	    </view>
-	    <!-- 博客 文章 -->
-	    <view class='diaryLs'>
-			<!-- <view  wx:for="{{works}}" wx:key="item">
-	            <navigator url='../detail/detail?workId={{item.id}}'>
-	                <view class="work-all">
-	    				<image src='{{blogUrl}}/{{item.img}}' class="work-img" binderror="workImgloadError" mode="aspectFill" data-errorimg="{{index}}"></image>
-	    				<view class="work-desc">
-	    					<view class="work-title">{{item.title}}</view>
-	    					<view class="work-cont">{{item.desc}}</view>
-	    					<view class="work-sign">{{item.browse_num}}阅读量</view>
-	    				</view>
-	                </view>
-	            </navigator>
-			</view> -->
-		
-            <view class="diary">
-				<view class="diary-top">
-					<view class="diary-main-top">
-						<view class="diary-top-left">
-							<view class="diary-top-head">
-                        		<image src='{{blogUrl}}/resource/images/head/1.jpg' class='img' mode=""></image>
-							</view>
-							<view class="diary-top-name-date">
-								<view class="diary-top-name">卧室煤油灯</view>
-								<view class="diary-top-date">2023/12/18 09:39:02</view>
-							</view>
-						</view>
-						<view class="diary-top-right">
-							<view class="diary-more">...</view>
-						</view>
-					</view>
-				</view>	
-				<view class="diary-center">
-					asdasdsadasdadasdasdasdsadasdsadasda
-				</view>
-				<view class="diary-bottom">
-					<view class="diary-bottom-left">
-						<view class='diary-bottom-img'><image src="{{blogUrl}}/resource/images/icon/preview-open.png" class="icon" alt=""></image></view>
-						<view class="diary-bottom-text">1231231321</view>
-					</view>
-					<view class="diary-bottom-right">
-						<view class='diary-bottom-img'><image src="{{blogUrl}}/resource/images/icon/like.png" class="icon" alt=""></image></view>
-						<view class="diary-bottom-text">213</view>
-					</view>
-					<view class="diary-bottom-right">
-						<view class='diary-bottom-img'><image src="{{blogUrl}}/resource/images/icon/comment.png" class="icon" style="margin-top: 0.25rem;" alt=""></image></view>
-						<view class="diary-bottom-text">12312</view>
+		<view style="display:none">
+			<image wx:for="{{images}}" wx:key="id" id="{{item.id}}" src="{{item.pic}}" bindload="onImageLoad"></image>
+		</view>
+		<scroll-view scroll-y="true" style="height:{{scrollH}}px" bindscrolltolower="loadImages">
+			<view style="width:100%">
+				<view class="img_item">
+					<view wx:for="{{col1}}" wx:key="id">
+						<image src="{{item.pic}}" style="width:100%;height:{{item.height}}px"></image>
 					</view>
 				</view>
-            </view>
-
-			
-            <view class="diary">
-				<view class="diary-top">
-					<view class="diary-main-top">
-						<view class="diary-top-left">
-							<view class="diary-top-head">
-                        		<image src='{{blogUrl}}/resource/images/head/1.jpg' class='img' mode=""></image>
-							</view>
-							<view class="diary-top-name-date">
-								<view class="diary-top-name">卧室煤油灯</view>
-								<view class="diary-top-date">2023/12/18 09:39:02</view>
-							</view>
-						</view>
-						<view class="diary-top-right">
-							<view class="diary-more">...</view>
-						</view>
-					</view>
-				</view>	
-				<view class="diary-center">
-					asdasdsadasdadasdasdasdsadasdsadasda
-				</view>
-				<view class="diary-bottom">
-					<view class="diary-bottom-left">
-						<view class='diary-bottom-img'><image src="{{blogUrl}}/resource/images/icon/preview-open.png" class="icon" alt=""></image></view>
-						<view class="diary-bottom-text">1231231321</view>
-					</view>
-					<view class="diary-bottom-right">
-						<view class='diary-bottom-img'><image src="{{blogUrl}}/resource/images/icon/like.png" class="icon" alt=""></image></view>
-						<view class="diary-bottom-text">213</view>
-					</view>
-					<view class="diary-bottom-right">
-						<view class='diary-bottom-img'><image src="{{blogUrl}}/resource/images/icon/comment.png" class="icon" style="margin-top: 0.25rem;" alt=""></image></view>
-						<view class="diary-bottom-text">12312</view>
+				<view class="img_item">
+					<view wx:for="{{col2}}" wx:key="id">
+						<image src="{{item.pic}}" style="width:100%;height:{{item.height}}px"></image>
 					</view>
 				</view>
-            </view>
-	    </view>
+			</view>
+		</scroll-view>
+		<!-- 空列表提示 -->
+		<view  wx:if="{{ listData.length == 0 }}" class="flex flex-column flex-items-center">
+			<image class="data-img" lazy-load mode="widthFix" src="/images/no-result.png" />
+			<view>还没有数据哦~</view>
+		</view>
+		<!-- 置底了 -->
+		<view wx:if="{{ reachBottom }}" class="flex flex-center">
+		  ~ 到底啦 ~
+		</view>
 	</view>
 </scroll-view>

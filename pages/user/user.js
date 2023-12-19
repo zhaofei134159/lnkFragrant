@@ -12,11 +12,14 @@ Component({
     canIUseGetUserProfile: wx.canIUse('getUserProfile'),
     canIUseNicknameComp: wx.canIUse('input.type.nickname'),
   },
-  onShow() {
-    if (typeof this.getTabBar === 'function' && this.getTabBar()) {
+  lifetimes: {
+    attached() {
+      // 加载底部tab 选中效果
       this.getTabBar().setData({
-        selected: 2
+        selected: 4
       })
+
+
     }
   },
   methods: {
