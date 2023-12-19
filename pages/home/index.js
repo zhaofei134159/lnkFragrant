@@ -47,6 +47,7 @@ Page({
       let col1 = this.data.col1;
       let col2 = this.data.col2;
 
+      console.log(e)
       console.log('imageId: ' + imageId)
       console.log('col1H: ' + col1H)
       console.log('col2H: ' + col2H)
