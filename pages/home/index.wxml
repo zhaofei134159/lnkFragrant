@@ -1,29 +1,59 @@
 <!--index.wxml-->
 <navigation-bar title="" back="{{false}}" color="#3f3d3d" background="#FFF"></navigation-bar>
-<scroll-view class="scrollarea" scroll-y type="list">
-	<view class="all">
-		<scroll-view scroll-y="true" style="height:{{scrollH}}px" bindscrolltolower="loadImages">
-			<view style="width:100%">
-				<view class="img_item">
-					<view wx:for="{{col1}}" wx:key="id">
-						<image src="{{item.pic}}" style="width:100%;height:{{item.height}}px"></image>
-					</view>
-				</view>
-				<view class="img_item">
-					<view wx:for="{{col2}}" wx:key="id">
-						<image src="{{item.pic}}" style="width:100%;height:{{item.height}}px"></image>
+<view class="all">
+	<scroll-view scroll-y="true" style="height:{{scrollH}}px">
+		<view style="width:100%"  wx:if="currentPage <= pageTotal">
+			<view class="img_item">
+				<view wx:for="{{col1}}" wx:key="item">
+					<view class="article">
+						<image wx:if="item.pic != ''" lazy-load class="image" src="{{item.pic}}" style="width:100%;height:{{item.imgHeight}}px;"></image>
+						<view wx:else>
+							{{item.content}}
+						</view>
+						<view class="article-info">
+							<view class="title">{{item.title}}</view>
+							<view class="article-bottom">
+								<view class="article-left">
+									<image lazy-load class="user-image" src="{{item.headPic}}"></image>
+									<view class="user-text">{{item.userName}}</view>
+								</view>
+								<view class="article-right">
+									<image lazy-load class="look-image" src="/resource/images/icon/preview-open.png"></image>
+									<view class="look-text">{{item.lookNum}}</view>
+								</view>
+							</view>
+						</view>
 					</view>
 				</view>
 			</view>
-		</scroll-view>
-		<!-- 空列表提示 -->
-		<view  wx:if="{{ listData.length == 0 }}" class="flex flex-column flex-items-center">
-			<image class="data-img" lazy-load mode="widthFix" src="/images/no-result.png" />
-			<view>还没有数据哦~</view>
+			<view class="img_item">
+				<view wx:for="{{col2}}" wx:key="id">
+					<view class="article">
+						<image wx:if="item.pic != ''" lazy-load class="image" src="{{item.pic}}" style="width:100%;height:{{item.imgHeight}}px;"></image>
+						<view wx:else>
+							{{item.content}}
+						</view>
+						<view class="article-info">
+							<view class="title">{{item.title}}</view>
+							<view class="article-bottom">
+								<view class="article-left">
+									<image lazy-load class="user-image" src="{{item.headPic}}"></image>
+									<view class="user-text">{{item.userName}}</view>
+								</view>
+								<view class="article-right">
+									<image lazy-load class="look-image" src="/resource/images/icon/preview-open.png"></image>
+									<view class="look-text">{{item.lookNum}}</view>
+								</view>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
 		</view>
+
 		<!-- 置底了 -->
-		<view wx:if="{{ reachBottom }}" class="flex flex-center">
-		  ~ 到底啦 ~
+		<view wx:if="currentPage > pageTotal" class="atEnd">
+		  ~~~~~ 我也是有底线的 ~~~~~
 		</view>
-	</view>
-</scroll-view>
+	</scroll-view>
+</view>
