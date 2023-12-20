@@ -2,9 +2,6 @@
 <navigation-bar title="" back="{{false}}" color="#3f3d3d" background="#FFF"></navigation-bar>
 <scroll-view class="scrollarea" scroll-y type="list">
 	<view class="all">
-		<view style="display:none">
-			<image wx:for="{{images}}" wx:key="id" id="{{item.id}}" src="{{item.pic}}" bindload="onImageLoad"></image>
-		</view>
 		<scroll-view scroll-y="true" style="height:{{scrollH}}px" bindscrolltolower="loadImages">
 			<view style="width:100%">
 				<view class="img_item">
