@@ -6,9 +6,11 @@
 			<view class="img_item">
 				<view wx:for="{{col1}}" wx:key="item">
 					<view class="article">
-						<image wx:if="item.pic != ''" lazy-load class="image" src="{{item.pic}}" style="width:100%;height:{{item.imgHeight}}px;"></image>
-						<view wx:else>
-							{{item.content}}
+						<view wx:if="{{item.pic != ''}}">
+							<image lazy-load class="image" src="{{item.pic}}" style="width:100%;height:{{item.imgHeight}}px;"></image>
+						</view>
+						<view wx:else class="article-cont">
+							<text>{{item.content}}</text>
 						</view>
 						<view class="article-info">
 							<view class="title">{{item.title}}</view>
@@ -29,9 +31,11 @@
 			<view class="img_item">
 				<view wx:for="{{col2}}" wx:key="id">
 					<view class="article">
-						<image wx:if="item.pic != ''" lazy-load class="image" src="{{item.pic}}" style="width:100%;height:{{item.imgHeight}}px;"></image>
-						<view wx:else>
-							{{item.content}}
+						<view wx:if="{{item.pic != ''}}">
+							<image lazy-load class="image" src="{{item.pic}}" style="width:100%;height:{{item.imgHeight}}px;"></image>
+						</view>
+						<view wx:else class="article-cont">
+							<text>{{item.content}}</text>
 						</view>
 						<view class="article-info">
 							<view class="title">{{item.title}}</view>

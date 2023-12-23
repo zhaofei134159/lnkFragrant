@@ -17,6 +17,7 @@ Page({
     imgWidth: 0,
     currentPage: 0,
     pageTotal: 0,
+    textHeight: 100,
     col1: [],
     col2: []
   },
@@ -36,10 +37,15 @@ Page({
         let imgWidth = this.data.imgWidth;  //图片设置的宽度
         let scale = imgWidth / oImgW;        //比例计算
         let imgHeight = oImgH * scale;      //自适应高度
+
+        // 如果没有图片 给固定高度
+        if(img.pic == ''){
+          imgHeight = this.data.textHeight;
+        }
+
         let imageObj = null
         imageObj = img 
         imageObj.imgHeight = imgHeight;
-        imageObj.bodyHeight = imgHeight + 60;
 
         if (col1H <= col2H) {
             col1H += imgHeight;
@@ -85,6 +91,7 @@ Page({
 
     var result = {
       images: [
+        { pic: "", content: "君不见，黄河之水天上来，奔流到海不复回。\n 君不见，高堂明镜悲白发，朝如青丝暮成雪。\n 人生得意须尽欢，莫使金樽空对月。\n天生我材必有用，千金散尽还复来。\n 烹羊宰牛且为乐，会须一饮三百杯。\n 岑夫子，丹丘生，将进酒，杯莫停。\n 与君歌一曲，请君为我倾耳听。\n 钟鼓馔玉不足贵，但愿长醉不愿醒。\n 古来圣贤皆寂寞，惟有饮者留其名。\n 陈王昔时宴平乐，斗酒十千恣欢谑。\n 主人何为言少钱，径须沽取对君酌。\n 五花马，千金裘，呼儿将出换美酒，与尔同销万古愁。", headPic: "/resource/images/head/1.jpg", userName: "爱仕达多无群二阿萨德", 'title': '古装风景图古装风景图古装风景图古装风景图古装风景图装风景图装风景图', 'id': '13', 'width': '0', 'height': '0', lookNum: '154.2k'},
         { pic: "/resource/images/bookmark/1.jpg", content: "", headPic: "/resource/images/head/1.jpg", userName: "爱仕达多无群二阿萨德", 'title': '古装风景图古装风景图古装风景图古装风景图古装风景图装风景图装风景图装风景图', 'id': '0', 'width': '420', 'height': '748', lookNum: '154.2k'},
         { pic: "/resource/images/bookmark/2.jpg", content: "", headPic: "/resource/images/head/1.jpg", userName: "爱仕达多无群二阿萨德",  'title': '古装风景图古装风景图古装风景图古装风景图古装风景图装风景图', 'id': '1', 'width': '1200', 'height': '675', lookNum: '154.2k'},
         { pic: "/resource/images/bookmark/3.jpg", content: "", headPic: "/resource/images/head/1.jpg", userName: "爱仕达多无群二阿萨德", 'title': '古装风景图古装风景图古装风景图古装风景图古装', 'id': '2', 'width': '420', 'height': '748', lookNum: '154.2k'},
@@ -98,7 +105,7 @@ Page({
         { pic: "/resource/images/bookmark/11.jpg", content: "", headPic: "/resource/images/head/1.jpg", userName: "爱仕达多无群二阿萨德",  'title': '古装风景图古装风景图古装风景图古装风景图古装风景图', 'id': '10', 'width': '420', 'height': '748', lookNum: '154.2k'},
         { pic: "/resource/images/bookmark/12.jpg", content: "", headPic: "/resource/images/head/1.jpg", userName: "爱仕达多无群二阿萨德",  'title': '古装风景图古装风景图古装风景图古装风景图古装风景图装风景图装风景图', 'id': '11', 'width': '420', 'height': '748', lookNum: '154.2k'},    
         
-        { pic: "", content: "大叔大婶是的那首的垃圾送点钱你未来的看似达拉斯拉到吉安卡罗打 阿斯顿阿德阿德阿德阿德啊是的请问阿松大请问刷单啊", headPic: "/resource/images/head/1.jpg", userName: "爱仕达多无群二阿萨德", 'title': '古装风景图古装风景图古装风景图古装风景图古装风景图装风景图装风景图', 'id': '12', 'width': '420', 'height': '748', lookNum: '154.2k'}    
+        { pic: "", content: "大叔大婶是的那首的垃圾送点钱你未来的看似达拉斯拉到吉安卡罗打 阿斯顿阿德阿德阿德阿德啊是的请问阿松大请问刷单啊", headPic: "/resource/images/head/1.jpg", userName: "爱仕达多无群二阿萨德", 'title': '古装风景图古装风景图古装风景图古装风景图古装风景图装风景图装风景图', 'id': '12', 'width': '0', 'height': '0', lookNum: '154.2k'}    
       ],
       pageTotal: 1,
       currentPage: currentPage,
