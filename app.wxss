@@ -9,7 +9,6 @@
   box-sizing: border-box;
   margin-bottom: 40px;
 }
-
 .all{
   margin-bottom: 40px;
 }

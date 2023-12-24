@@ -52,7 +52,7 @@
         <text>{{appletName}}</text>
       </block>
       <block wx:else>
-        <slot name="center">{{title}}</slot>
+        <text>{{title}}</text>
       </block>
     </view>
     

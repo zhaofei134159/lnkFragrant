@@ -5,10 +5,12 @@ var conf = require('../../resource/js/conf.js'),
 // index.js
 Component({
   data: {
-    lun_ad: {},
-    works: {},
-    webUrl: conf.webUrl,
-    appletName: "墨香随笔"
+    title: "日历",
+    weekSetting: ['日', '一', '二', '三', '四', '五', '六'],
+    curentYear: '',
+    curentMonth: '',
+    currentWeekDate: [],
+    currentMonthDate: []
   },
   lifetimes: {
     attached() {
@@ -18,25 +20,37 @@ Component({
       })
 
       // 
-      var self = this;
-      util.request({
-        url:conf.homeUrl,
-        data:{'workIndex':1},
-        method:'get',
-        header:{'content-type': 'application/json'},
-        success: function (callback) {
-          var Articles = callback.data.works;
-          for (var i = 0, len = Articles.length; i < len; i++) {
-            var item = Articles[i];
-              item.desc = util.delHtmlTag(item.desc);
-          }
-          self.setData({
-            lun_ad: callback.data.lun_ad,
-            works: Articles,
-          })        
-        }
-      })
+      this.getDateInfo();
     },
   },
-  methods: {},
+  methods: {
+    // 获取日期的当前周、月
+    getDateInfo: function (dateS='') {
+      // 一天的毫秒数
+      var dayTime = 3600 * 24 * 1000;
+
+      // 日期
+      var date = new Date();
+      if (dateS != '') {
+        date = new Date(dateS);
+      }
+      var Date2 = date.getTime();
+      var week = date.getDay();
+
+      var year = date.getFullYear();
+      var month = date.getMonth() + 1;
+      var day = date.getDate();
+
+      var weekLs = [];
+      for (let i = 0; i <= 6; i++) {
+        
+        weekLs.push(new Date(Date2 - (week - i) * dayTime).getDate())
+      }
+
+      this.setData({
+        curentYear: year,
+        curentMonth: month,
+      })
+    }
+  },
 })
