@@ -43,13 +43,13 @@ Component({
 
       var weekLs = [];
       for (let i = 0; i <= 6; i++) {
-        
         weekLs.push(new Date(Date2 - (week - i) * dayTime).getDate())
       }
 
       this.setData({
         curentYear: year,
         curentMonth: month,
+        currentWeekDate: weekLs
       })
     }
   },

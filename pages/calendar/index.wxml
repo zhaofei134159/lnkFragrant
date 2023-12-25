@@ -17,10 +17,14 @@
 	</view>
 	<view class="main">
 		<view class="week">
-			<view wx:for="{{weekSetting}}" wx:key="item" class="week-title">
+			<view class="week-title">
+				<view wx:for="{{weekSetting}}" wx:key="item" >
+					<text>{{item}}</text>
+				</view>
+			</view>
+			<view wx:for="{{currentWeekDate}}" wx:key="item" class="week-title">
 				<text>{{item}}</text>
 			</view>
-			<view></view>
 		</view>	
 	</view>
 	<view class="main-data">
