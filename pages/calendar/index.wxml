@@ -1,32 +1,43 @@
 <!--index.wxml-->
 <navigation-bar title="{{title}}" back="{{false}}" color="#3f3d3d" background="#FFF"></navigation-bar>
 <view class="all">
-	<!-- 日历 -->
-	<view class="title">
-		<view class="title-left">
-			{{curentYear}} / {{curentMonth}}
-		</view>
-		<view class="title-right">
-			<view class="calendar-type">
-				<image src="/resource/images/icon/setting.png" class="title-icon"></image>
+	<view class="center">
+		<!-- 日历 -->
+		<view class="title">
+			<view class="title-left">
+				{{curentYear}} / {{curentMonth}}
 			</view>
-			<view class="calendar-type">
-				<image src="/resource/images/icon/calendar.png" class="title-icon"></image>
-			</view>
-		</view>
-	</view>
-	<view class="main">
-		<view class="week">
-			<view class="week-title">
-				<view wx:for="{{weekSetting}}" wx:key="item" >
-					<text>{{item}}</text>
+			<view class="title-right">
+				<view class="calendar-type">
+					<image src="/resource/images/icon/setting.png" class="title-icon"></image>
+				</view>
+				<view class="calendar-type">
+					<image src="/resource/images/icon/calendar.png" class="title-icon"></image>
 				</view>
 			</view>
-			<view wx:for="{{currentWeekDate}}" wx:key="item" class="week-title">
-				<text>{{item}}</text>
-			</view>
-		</view>	
-	</view>
-	<view class="main-data">
+		</view>
+		<view class="main">
+			<view class="week">
+				<view class="week-title">
+					<view wx:for="{{weekSetting}}" wx:key="item" class="week-item">
+						<text>{{item}}</text>
+					</view>
+				</view>
+				<!-- <view class="week-date-data">
+					<view wx:for="{{currentWeekDate}}" wx:key="item" class="data-item">
+						<text>{{item}}</text>
+					</view>
+				</view> -->
+				<view class="month-date-data">
+					<view wx:for="{{currentMonthDate}}" wx:key="item" class="data-item">
+						<text>{{item}}</text>
+					</view>
+				</view>
+				<view class="down-bar" style="top: {{contentBarTop}}px;position: relative;">
+					<view class="bartab" bindtouchstart="barStartTouch" bindtouchmove="barOnTouchMove" bindtouchend="barEndTouch"></view>
+				</view>
+			</view>	
+		</view>
+		<view class="main-data"></view>
 	</view>
 </view>

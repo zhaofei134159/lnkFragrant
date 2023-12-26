@@ -1,61 +1,63 @@
 <!--index.wxml-->
 <navigation-bar title="" back="{{false}}" color="#3f3d3d" background="#FFF"></navigation-bar>
 <view class="all">
-	<view style="width:100%"  wx:if="currentPage <= pageTotal">
-		<view class="img_item">
-			<view wx:for="{{col1}}" wx:key="item">
-				<view class="article">
-					<view wx:if="{{item.pic != ''}}">
-						<image lazy-load class="image" src="{{item.pic}}" style="width:100%;height:{{item.imgHeight}}px;"></image>
-					</view>
-					<view wx:else class="article-cont">
-						<text user-select>{{item.content}}</text>
-					</view>
-					<view class="article-info">
-						<view class="title">{{item.title}}</view>
-						<view class="article-bottom">
-							<view class="article-left">
-								<image lazy-load class="user-image" src="{{item.headPic}}"></image>
-								<view class="user-text">{{item.userName}}</view>
+	<view class="center">
+		<view style="width:100%"  wx:if="currentPage <= pageTotal">
+			<view class="img_item">
+				<view wx:for="{{col1}}" wx:key="item">
+					<view class="article">
+						<view wx:if="{{item.pic != ''}}">
+							<image lazy-load class="image" src="{{item.pic}}" style="width:100%;height:{{item.imgHeight}}px;"></image>
+						</view>
+						<view wx:else class="article-cont">
+							<text user-select>{{item.content}}</text>
+						</view>
+						<view class="article-info">
+							<view class="title">{{item.title}}</view>
+							<view class="article-bottom">
+								<view class="article-left">
+									<image lazy-load class="user-image" src="{{item.headPic}}"></image>
+									<view class="user-text">{{item.userName}}</view>
+								</view>
+								<view class="article-right">
+									<image lazy-load class="look-image" src="/resource/images/icon/preview-open.png"></image>
+									<view class="look-text">{{item.lookNum}}</view>
+								</view>
 							</view>
-							<view class="article-right">
-								<image lazy-load class="look-image" src="/resource/images/icon/preview-open.png"></image>
-								<view class="look-text">{{item.lookNum}}</view>
+						</view>
+					</view>
+				</view>
+			</view>
+			<view class="img_item">
+				<view wx:for="{{col2}}" wx:key="id">
+					<view class="article">
+						<view wx:if="{{item.pic != ''}}">
+							<image lazy-load class="image" src="{{item.pic}}" style="width:100%;height:{{item.imgHeight}}px;"></image>
+						</view>
+						<view wx:else class="article-cont">
+							<text user-select>{{item.content}}</text>
+						</view>
+						<view class="article-info">
+							<view class="title">{{item.title}}</view>
+							<view class="article-bottom">
+								<view class="article-left">
+									<image lazy-load class="user-image" src="{{item.headPic}}"></image>
+									<view class="user-text">{{item.userName}}</view>
+								</view>
+								<view class="article-right">
+									<image lazy-load class="look-image" src="/resource/images/icon/preview-open.png"></image>
+									<view class="look-text">{{item.lookNum}}</view>
+								</view>
 							</view>
 						</view>
 					</view>
 				</view>
 			</view>
 		</view>
-		<view class="img_item">
-			<view wx:for="{{col2}}" wx:key="id">
-				<view class="article">
-					<view wx:if="{{item.pic != ''}}">
-						<image lazy-load class="image" src="{{item.pic}}" style="width:100%;height:{{item.imgHeight}}px;"></image>
-					</view>
-					<view wx:else class="article-cont">
-						<text user-select>{{item.content}}</text>
-					</view>
-					<view class="article-info">
-						<view class="title">{{item.title}}</view>
-						<view class="article-bottom">
-							<view class="article-left">
-								<image lazy-load class="user-image" src="{{item.headPic}}"></image>
-								<view class="user-text">{{item.userName}}</view>
-							</view>
-							<view class="article-right">
-								<image lazy-load class="look-image" src="/resource/images/icon/preview-open.png"></image>
-								<view class="look-text">{{item.lookNum}}</view>
-							</view>
-						</view>
-					</view>
-				</view>
-			</view>
-		</view>
-	</view>
 
-	<!-- 置底了 -->
-	<view wx:if="currentPage > pageTotal" class="atEnd">
-	  ~~~~~ 我也是有底线的 ~~~~~
+		<!-- 置底了 -->
+		<view wx:if="currentPage > pageTotal" class="atEnd">
+		  ~~~~~ 我也是有底线的 ~~~~~
+		</view>
 	</view>
 </view>

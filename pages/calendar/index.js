@@ -10,7 +10,12 @@ Component({
     curentYear: '',
     curentMonth: '',
     currentWeekDate: [],
-    currentMonthDate: []
+    currentMonthDate: [],
+    // 滑块 移动距离
+    startBarY: '',
+    currentBarY: '',
+    contentBarTop: 0,
+    maxBarHeight: 200,
   },
   lifetimes: {
     attached() {
@@ -46,11 +51,34 @@ Component({
         weekLs.push(new Date(Date2 - (week - i) * dayTime).getDate())
       }
 
+      var monthLs = [];
+      for (let i = 0; i <= 6; i++) {
+        weekLs.push(new Date(Date2 - (week - i) * dayTime).getDate())
+      }
+
       this.setData({
         curentYear: year,
         curentMonth: month,
         currentWeekDate: weekLs
       })
+    },
+    barStartTouch: function(e) {
+      this.setData({ startBarY: e.touches[0].clientY });  
+    },  
+    barOnTouchMove: function(e) {
+      this.setData({ currentBarY: e.touches[0].clientY });  
+      // 根据触摸移动的距离计算内容的位置变化，这里简单地将内容向上移动，你可以根据需要进行调整。  
+      var moveY = this.data.currentBarY - this.data.startBarY;  
+      var newTop = this.data.contentBarTop + moveY;  
+      if (newTop < 0) { // 防止内容被拖出容器外  
+        newTop = 0;  
+      } else if (newTop > this.data.maxBarHeight) { // 防止内容被拖进容器内  
+        newTop = this.data.maxBarHeight;  
+      }  
+      this.setData({ contentBarTop: newTop }); // contentTop为控制内容位置的data属性，可以根据需要自行调整。  
+    },  
+    barEndTouch: function() {
+      // 在触摸结束时处理相关逻辑，如动画效果等。  
     }
   },
 })
