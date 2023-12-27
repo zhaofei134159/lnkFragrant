@@ -13,6 +13,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    title: '',
     scrollH: 0,
     imgWidth: 0,
     currentPage: 0,

@@ -9,8 +9,12 @@
   box-sizing: border-box;
   margin-bottom: 40px;
 }
+.weui-navigation-bar{
+  font-family: cursive;
+}
 .all{
   margin-bottom: 40px;
+  font-family: cursive;
 }
 
 /*@font-face {

@@ -55,7 +55,7 @@
   line-height: 28px;
 }
 .content .content-left{
-  font-size: 36rpx;
+  font-size: 14px;
   font-weight: 400;
   width: 50%;
   height:100%;
@@ -84,29 +84,6 @@
   top: 0px;
   left: 0px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .main{
   width: 100%;

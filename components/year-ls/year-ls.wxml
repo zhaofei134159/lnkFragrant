@@ -1,0 +1,17 @@
+<view class="year-item">
+  <view class="month-item" wx:for="{{monthLs}}" wx:key="item">
+    <view class="month-title">{{item}}月</view>
+    <view class="month-data">
+        <view class="week-title">
+          <view wx:for="{{weekSetting}}" wx:key="item" class="week-item">
+            <text>{{item}}</text>
+          </view>
+        </view>
+        <view class="month-date-data">
+          <view wx:for="{{dateLs[item]}}" wx:key="item" class="data-item">
+            <text>{{item}}</text>
+          </view>
+        </view>
+    </view>
+  </view>
+</view>

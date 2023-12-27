@@ -5,7 +5,8 @@
 		<!-- 日历 -->
 		<view class="title">
 			<view class="title-left">
-				{{curentYear}} / {{curentMonth}}
+				<text>{{curentYear}}</text>
+				<text wx-if="{{calendarType != 1}}"> / {{curentMonth}}</text>
 			</view>
 			<view class="title-right">
 				<!-- <view class="calendar-type">
@@ -17,7 +18,7 @@
 			</view>
 		</view>
 		<view class="main">
-			<view class="week">
+			<view class="week" wx-if="{{calendarType != 1}}">
 				<view class="week-title">
 					<view wx:for="{{weekSetting}}" wx:key="item" class="week-item">
 						<text>{{item}}</text>
@@ -37,6 +38,9 @@
 					<view class="bartab" bindtouchstart="barStartTouch" bindtouchmove="barOnTouchMove" bindtouchend="barEndTouch"></view>
 				</view>
 			</view>	
+			<view class="year" wx-if="{{calendarType == 1}}">
+				<year-ls year="{{curentYear}}" ></year-ls>
+			</view>
 		</view>
 		<view class="main-data"></view>
 	</view>

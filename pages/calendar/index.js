@@ -7,14 +7,14 @@ Component({
   data: {
     title: "日历",
     weekSetting: ['日', '一', '二', '三', '四', '五', '六'],
-    curentYear: '',
+    curentYear: '2022',
     curentMonth: '',
     currentWeekDate: [],
     currentMonthDate: [],
     // 日历选择
     calendarTop: 0,
     calendarSelect: true,
-    calendarType: 3,
+    calendarType: 1,
     // 滑块 移动距离
     startBarY: '',
     currentBarY: '',
@@ -107,9 +107,7 @@ Component({
       var calendartype = e.currentTarget.dataset.calendartype;
       var barTop = 0;
 
-      if (calendartype == 1) {
-
-      } else if(calendartype == 2) {
+      if(calendartype == 2) {
         barTop = 200;
       } else if(calendartype == 3) {
         barTop = 0;
