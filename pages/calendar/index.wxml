@@ -45,15 +45,15 @@
 		<view class="content" hidden="{{calendarSelect}}" style="top: {{calendarTop}}px; right: 1rem">
 			<view bindtap="changeContent" data-calendartype="1" class="content-item" style=""> 
 				<view class="content-left"> 年视图 </view>
-				<view class="content-right"><image wx-if="{{calendarType == 1}}" src="/resource/images/icon/check-small.png" class="img"></image></view>
+				<view class="content-right"><image wx-if="{{calendarType == 1}}" src="/resource/images/icon/check.png" class="img"></image></view>
 			</view>
 			<view bindtap="changeContent" data-calendartype="2" class="content-item"> 
 				<view class="content-left"> 月视图 </view>
-				<view class="content-right"><image wx-if="{{calendarType == 2}}" src="/resource/images/icon/check-small.png" class="img"></image></view>
+				<view class="content-right"><image wx-if="{{calendarType == 2}}" src="/resource/images/icon/check.png" class="img"></image></view>
 			</view>
 			<view bindtap="changeContent" data-calendartype="3" class="content-item">
 				<view class="content-left"> 周视图 </view>
-				<view class="content-right"><image wx-if="{{calendarType == 3}}" src="/resource/images/icon/check-small.png" class="img"></image></view>
+				<view class="content-right"><image wx-if="{{calendarType == 3}}" src="/resource/images/icon/check.png" class="img"></image></view>
 			</view>
 		</view>
 	</view>
