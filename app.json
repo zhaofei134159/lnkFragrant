@@ -1,7 +1,7 @@
 {
   "pages": [
     "pages/home/index",
-    "pages/calendar/index",
+    "pages/classify/index",
     "pages/add/index",
     "pages/message/index",
     "pages/user/user"
@@ -19,14 +19,14 @@
     "list": [
         {
           "pagePath": "pages/home/index",
-          "iconPath": "",
-          "selectedIconPath": "",
+          "iconPath": "/resource/images/icon/add-hei.png",
+          "selectedIconPath": "/resource/images/icon/add-hei.png",
           "text": "首页"
         },
         {
-          "pagePath": "pages/calendar/index",
-          "iconPath": "",
-          "selectedIconPath": "",
+          "pagePath": "pages/classify/index",
+          "iconPath": "/resource/images/icon/add-hei.png",
+          "selectedIconPath": "/resource/images/icon/add-hei.png",
           "text": "日历"
         },
         {
@@ -37,14 +37,14 @@
         },
         {
           "pagePath": "pages/message/index",
-          "iconPath": "",
-          "selectedIconPath": "",
+          "iconPath": "/resource/images/icon/add-hei.png",
+          "selectedIconPath": "/resource/images/icon/add-hei.png",
           "text": "消息"
         },
         {
           "pagePath": "pages/user/user",
-          "iconPath": "",
-          "selectedIconPath": "",
+          "iconPath": "/resource/images/icon/add-hei.png",
+          "selectedIconPath": "/resource/images/icon/add-hei.png",
           "text": "我的"
         }
     ]

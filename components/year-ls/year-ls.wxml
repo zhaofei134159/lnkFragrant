@@ -1,5 +1,5 @@
-<view class="year-item">
-  <view class="month-item" wx:for="{{monthLs}}" wx:key="item">
+<view class="year-item" style="left: {{contentYearLeft}}px;" bindtouchstart="yearStartTouch" bindtouchmove="yearOnTouchMove" bindtouchend="yearEndTouch">
+  <view class="month-item" wx:for="{{monthLs}}" wx:key="item" bindtap="changeMonth" data-year="{{currentYear}}" data-month="{{item}}">
     <view class="month-title">{{item}}月</view>
     <view class="month-data">
         <view class="week-title">

@@ -15,6 +15,9 @@
 				<view class="calendar-type">
 					<image src="/resource/images/icon/calendar.png" class="title-icon" bindtap="calendarType"></image>
 				</view>
+				<view class="calendar-type">
+					<image src="/resource/images/icon/inspection.png" class="title-icon" bindtap="calendarToday"></image>
+				</view>
 			</view>
 		</view>
 		<view class="main">
@@ -34,12 +37,12 @@
 						<text>{{item}}</text>
 					</view>
 				</view>
-				<view class="down-bar">
-					<view class="bartab" bindtouchstart="barStartTouch" bindtouchmove="barOnTouchMove" bindtouchend="barEndTouch"></view>
+				<view class="down-bar" >
+					<view class="bartab" style="top: 0px; left: 42.5%" bindtouchstart="barStartTouch" bindtouchmove="barOnTouchMove" bindtouchend="barEndTouch"></view>
 				</view>
 			</view>	
 			<view class="year" wx-if="{{calendarType == 1}}">
-				<year-ls year="{{curentYear}}" ></year-ls>
+				<year-ls year="{{curentYear}}" bind:changeYearMonth="changeYearMonth" bind:changeYear="changeYear"></year-ls>
 			</view>
 		</view>
 		<view class="main-data"></view>

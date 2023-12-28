@@ -9,12 +9,12 @@ Component({
     weekSetting: ['日', '一', '二', '三', '四', '五', '六'],
     curentYear: '2022',
     curentMonth: '',
-    currentWeekDate: [],
-    currentMonthDate: [],
+    currentWeekDate: [11,12],
+    currentMonthDate: [1,2],
     // 日历选择
     calendarTop: 0,
     calendarSelect: true,
-    calendarType: 1,
+    calendarType: 3,
     // 滑块 移动距离
     startBarY: '',
     currentBarY: '',
@@ -23,11 +23,6 @@ Component({
   },
   lifetimes: {
     attached() {
-      // 加载底部tab 选中效果
-      this.getTabBar().setData({
-        selected: 1
-      })
-
       // 
       this.getDateInfo();
     },
@@ -62,7 +57,12 @@ Component({
       // 获取周的日期
       var weekLs = [];
       for (let i = 0; i <= 6; i++) {
-        weekLs.push(new Date(Date2 - (week - i) * dayTime).getDate())
+        var newDate = new Date(Date2 - (week - i) * dayTime);
+        if (month != newDate.getMonth() + 1) {
+          weekLs.push(' ')
+        }else{
+          weekLs.push(newDate.getDate())
+        }
       }
 
       // 获取月份的日期
@@ -116,6 +116,28 @@ Component({
       this.setData({
         contentBarTop: barTop,
         calendarType: calendartype,
+        calendarSelect: true
+      })
+    },
+    changeYearMonth: function (e){
+      this.getDateInfo(e.detail + '-01');
+
+      this.setData({
+        contentBarTop: 10,
+        calendarType: 2,
+        calendarSelect: true
+      })
+    },
+    changeYear: function (e) {
+      this.setData({
+        curentYear: e.detail
+      });
+    },
+    calendarToday: function () {
+      this.getDateInfo();
+      this.setData({
+        contentBarTop: 0,
+        calendarType: 3,
         calendarSelect: true
       })
     },

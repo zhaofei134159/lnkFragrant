@@ -11,10 +11,10 @@ Component({
           text: "首页",
         },
         {
-          pagePath: "/pages/calendar/index",
+          pagePath: "/pages/classify/index",
           iconPath: "",
           selectedIconPath: "",
-          text: "日历"
+          text: "分类"
         },
         {
           pagePath: "/pages/add/index",
