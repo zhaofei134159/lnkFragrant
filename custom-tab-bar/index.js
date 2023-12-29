@@ -12,9 +12,9 @@ Component({
         },
         {
           pagePath: "/pages/classify/index",
-          iconPath: "",
-          selectedIconPath: "",
-          text: "分类"
+          iconPath: "/resource/images/icon/friends-circle.png",
+          selectedIconPath: "/resource/images/icon/friends-circle-active.png",
+          text: "朋友"
         },
         {
           pagePath: "/pages/add/index",
