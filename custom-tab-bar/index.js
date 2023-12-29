@@ -6,8 +6,8 @@ Component({
       list: [
         {
           pagePath: "/pages/home/index",
-          iconPath: "",
-          selectedIconPath: "",
+          iconPath: "/resource/images/icon/home-hei.png",
+          selectedIconPath: "/resource/images/icon/home-hei-active.png",
           text: "首页",
         },
         {
@@ -25,14 +25,14 @@ Component({
         },
         {
           pagePath: "/pages/message/index",
-          iconPath: "",
-          selectedIconPath: "",
+          iconPath: "/resource/images/icon/message.png",
+          selectedIconPath: "/resource/images/icon/message-active.png",
           text: "消息",
         },
         {
           pagePath: "/pages/user/user",
-          iconPath: "",
-          selectedIconPath: "",
+          iconPath: "/resource/images/icon/user-hei.png",
+          selectedIconPath: "/resource/images/icon/user-hei-active.png",
           text: "我的"
         },
       ]
